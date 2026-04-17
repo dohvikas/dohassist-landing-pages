@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Station Accounting &amp; Daily Reconciliation | DohAssist</title>
+    <meta name="description" content="Stop spending hours on your gas station books. DohAssist closes your books by 9 AM every day — daily sales reconciliation, fuel tracking, lottery, vendor invoices. From $299/mo.">
+    <meta property="og:title" content="Gas Station Accounting & Daily Reconciliation | DohAssist">
+    <meta property="og:description" content="Books closed by 9 AM every day. Daily reconciliation, fuel tracking, lottery, vendor invoices — all done for you. From $299/mo per location.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) — GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G99Y9LYFNJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G99Y9LYFNJ');
+      gtag('config', 'AW-16877744463');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2733472787004307');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.net/tr?id=2733472787004307&ev=PageView&noscript=1"/></noscript>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #00a3e0;
+  --primary-hover: #0090c5;
+  --primary-dark: #007bb5;
+  --dark: #0f172a;
+  --dark-2: #1e293b;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  --bg: #ffffff;
+  --bg-alt: #f8fafc;
+  --bg-dark: #0f172a;
+  --border: #e5e7eb;
+  --success: #10b981;
+  --accent: #00d4aa;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.1);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); font-size: 16px; line-height: 1.6; color: var(--text); background: var(--bg); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--primary); text-decoration: none; }
+
+/* ─── Top Bar ─── */
+.top-bar {
+  background: var(--bg-dark);
+  padding: 10px 0;
+  text-align: center;
+}
+.top-bar p {
+  color: #94a3b8;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  max-width: 100%;
+}
+.top-bar strong { color: #ffffff; }
+
+/* ─── Header ─── */
+.header {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.header-logo svg { width: 36px; height: 36px; }
+.header-logo-text {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+}
+.header-logo-text span { color: var(--primary); }
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+}
+.header-phone svg { width: 18px; height: 18px; color: var(--primary); }
+
+/* ─── Container ─── */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* ─── Hero ─── */
+.hero {
+  padding: 60px 0 48px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #f0fdf4 100%);
+}
+.hero .container { display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: start; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #a7f3d0;
+}
+.hero-badge svg { width: 16px; height: 16px; }
+.hero h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--primary);
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 540px;
+}
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.hero-stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark);
+}
+.hero-stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ─── Form Card ─── */
+.form-card {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+.form-card-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.form-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.form-card-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.form-group { margin-bottom: 12px; }
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.form-group label .required { color: #ef4444; }
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 163, 224, 0.1);
+}
+.form-group input::placeholder { color: var(--text-light); }
+.radio-group {
+  display: flex;
+  gap: 16px;
+  padding-top: 4px;
+}
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+.radio-group input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+.form-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+}
+.form-submit:hover { background: var(--primary-hover); }
+.form-submit:active { transform: scale(0.99); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-privacy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+.form-privacy svg { width: 12px; height: 12px; display: inline-block; vertical-align: -1px; margin-right: 4px; }
+.form-error {
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  display: none;
+}
+.form-success {
+  text-align: center;
+  padding: 40px 20px;
+  display: none;
+}
+.form-success svg { width: 48px; height: 48px; color: var(--success); margin: 0 auto 16px; }
+.form-success h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+.form-success p { color: var(--text-muted); font-size: 14px; }
+.hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+
+/* ─── Section Shared ─── */
+.section { padding: 64px 0; }
+.section-alt { background: var(--bg-alt); }
+.section-dark { background: var(--bg-dark); color: #ffffff; }
+.section-dark .section-eyebrow { color: var(--accent); }
+.section-dark .section-title { color: #ffffff; }
+.section-dark .section-desc { color: #94a3b8; }
+.section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+.section-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.section-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ─── Pain Points Grid ─── */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pain-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.pain-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+.pain-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.pain-icon svg { width: 22px; height: 22px; }
+.pain-icon-red { background: #fef2f2; color: #dc2626; }
+.pain-icon-orange { background: #fff7ed; color: #ea580c; }
+.pain-icon-yellow { background: #fefce8; color: #ca8a04; }
+.pain-icon-blue { background: #eff6ff; color: #2563eb; }
+.pain-icon-purple { background: #faf5ff; color: #9333ea; }
+.pain-icon-teal { background: #f0fdfa; color: #0d9488; }
+.pain-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.pain-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ─── Steps ─── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.step {
+  text-align: center;
+  position: relative;
+}
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.step h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.step p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ─── Results / Stats Bar ─── */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.stat-item {}
+.stat-value {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.section-dark .stat-value { color: var(--accent); }
+.stat-label {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ─── Testimonial ─── */
+.testimonial-card {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+}
+.testimonial-quote {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.7;
+  color: #e2e8f0;
+  margin-bottom: 24px;
+}
+.testimonial-author {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 15px;
+}
+.testimonial-role {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* ─── Case Study ─── */
+.case-study {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.case-study-content { padding: 40px 32px; }
+.case-study-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.case-study-content p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.case-study-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.case-metric {
+  background: var(--bg-alt);
+  padding: 16px;
+  border-radius: var(--radius);
+}
+.case-metric-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+}
+.case-metric-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.case-study-visual {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #1e3a5f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.case-visual-content { text-align: center; color: #ffffff; }
+.case-visual-icon { font-size: 48px; margin-bottom: 16px; }
+.case-visual-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.case-visual-sub { font-size: 14px; color: #94a3b8; }
+
+/* ─── FAQ ─── */
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  font-family: var(--font);
+  text-align: left;
+}
+.faq-question svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item.open .faq-question svg { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer-inner {
+  padding-bottom: 20px;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ─── Bottom CTA ─── */
+.cta-section {
+  padding: 64px 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  text-align: center;
+  color: #ffffff;
+}
+.cta-section h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.cta-section p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin-bottom: 28px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: #ffffff;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: var(--radius);
+  font-family: var(--font);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+/* ─── Footer ─── */
+.footer {
+  background: var(--bg-dark);
+  padding: 32px 0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+}
+.footer a { color: var(--accent); }
+.footer-links { margin-top: 8px; }
+.footer-links a { margin: 0 12px; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .hero .container { grid-template-columns: 1fr; gap: 32px; }
+  .hero { padding: 40px 0 32px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat-value { font-size: 22px; }
+  .pain-grid { grid-template-columns: 1fr; gap: 16px; }
+  .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+  .stats-bar { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .case-study { grid-template-columns: 1fr; }
+  .case-study-visual { min-height: 200px; }
+  .form-row { grid-template-columns: 1fr; gap: 12px; }
+  .section { padding: 48px 0; }
+  .testimonial-quote { font-size: 17px; }
+}
+@media (max-width: 480px) {
+  .hero-stats { flex-direction: column; gap: 12px; }
+  .radio-group { flex-direction: column; gap: 8px; }
+  .stats-bar { grid-template-columns: 1fr; }
+  .header-phone span { display: none; }
+}
+</style>
+  </head>
+  <body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <p><strong>$9M+ reconciled annually</strong> across 170+ franchise locations</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a href="https://www.dohassist.com" target="_blank" rel="noopener noreferrer" class="header-logo">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="36" height="36" rx="8" fill="#00a3e0"/>
+  <path d="M10 12h4v12h-4V12z" fill="#ffffff"/>
+  <path d="M16 18c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z" fill="#ffffff" fill-opacity="0.9"/>
+  <path d="M19.5 18l2 2 3-3" stroke="#00a3e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          <span class="header-logo-text">Doh<span>Assist</span></span>
+        </a>
+        <a href="tel:+18009876543" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Talk to Our Team</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Virtual Back Office for Gas Stations
+          </div>
+          <h1>Your Books Closed by <em>9 AM</em> — Every Single Day</h1>
+          <p class="hero-sub">
+            Stop spending 15-20 hours a week on reconciliation, fuel tracking, and vendor invoices. DohAssist's back office team does it all — daily sales reconciliation, lottery, fuel, bank statements — so you can focus on running your business.
+          </p>
+          <p class="hero-sub" style="font-weight:600; color:var(--dark); margin-bottom: 28px;">
+            From $299/month per location. No contracts. No setup fees.
+          </p>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-value">$9M+</div>
+              <div class="hero-stat-label">Reconciled annually</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">170+</div>
+              <div class="hero-stat-label">Locations served</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">9 AM</div>
+              <div class="hero-stat-label">Books closed daily</div>
+            </div>
+          </div>
+        </div>
+
+        
+          <div class="form-card" id="lead-form-card">
+            <div class="form-card-header">
+              <h2 class="form-card-title">Get Your Books Under Control</h2>
+              <p class="form-card-sub">See how we can handle your daily reconciliation.</p>
+            </div>
+            <div class="form-error" id="form-error"></div>
+            <form id="lead-form" novalidate>
+              <input type="hidden" name="landing_page" value="gas-station-accounting">
+              <input type="hidden" name="form_rendered_at" id="form_rendered_at">
+              <div class="hp-field" aria-hidden="true">
+                <label for="website_url">Website</label>
+                <input type="text" name="website_url" id="website_url" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name <span class="required">*</span></label>
+                  <input type="text" name="first_name" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                  <label>Last Name <span class="required">*</span></label>
+                  <input type="text" name="last_name" placeholder="Smith" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Email <span class="required">*</span></label>
+                  <input type="email" name="email" placeholder="john@business.com" required>
+                </div>
+                <div class="form-group">
+                  <label>Phone <span class="required">*</span></label>
+                  <input type="tel" name="phone" placeholder="(555) 123-4567" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Business Name <span class="required">*</span></label>
+                <input type="text" name="business_name" placeholder="Your business name" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Business Type</label>
+                  <select name="business_type">
+                    <option value="">Select type...</option>
+                    <option value="Gas Station">Gas Station</option>
+                    <option value="Convenience Store">Convenience Store</option>
+                    <option value="Restaurant / QSR">Restaurant / QSR</option>
+                    <option value="Bar / Nightclub">Bar / Nightclub</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="Hardware / Retail">Hardware / Retail</option>
+                    <option value="Multi-Unit Franchise">Multi-Unit Franchise</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Number of Locations</label>
+                  <select name="num_locations">
+                    <option value="">Select...</option>
+                    <option value="1">1 Location</option>
+                    <option value="2-5">2-5 Locations</option>
+                    <option value="6-10">6-10 Locations</option>
+                    <option value="10+">10+ Locations</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="contact_method" value="Phone"> Phone</label>
+                  <label><input type="radio" name="contact_method" value="Email"> Email</label>
+                  <label><input type="radio" name="contact_method" value="Text"> Text</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Best Time to Contact</label>
+                <select name="best_time">
+                  <option value="">Select time...</option>
+                  <option value="Morning (8am-12pm)">Morning (8am-12pm)</option>
+                  <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
+                  <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
+                  <option value="Anytime">Anytime</option>
+                </select>
+              </div>
+              <button type="submit" class="form-submit" id="form-submit-btn">Get Started</button>
+              <p class="form-privacy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Your information is secure and never shared.
+              </p>
+            </form>
+            <div class="form-success" id="form-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <h3>We received your request</h3>
+              <p>A DohAssist specialist will contact you within 1 business day.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">The Problem</div>
+          <h2 class="section-title">Gas Station Bookkeeping Is a Full-Time Job You Shouldn't Be Doing</h2>
+          <p class="section-desc">Between daily sales, fuel deliveries, lottery tickets, vendor invoices, and bank reconciliation — most owners spend 15-20 hours a week just keeping the books straight.</p>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
+            <h3>Daily Sales Don't Add Up</h3>
+            <p>POS totals don't match deposits. Cash shortages appear out of nowhere. You're spending hours each morning reconciling yesterday's numbers.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M15 10h2a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9l-3-3"/><rect x="5" y="6" width="8" height="6" rx="1"/><line x1="3" y1="22" x2="15" y2="22"/></svg></div>
+            <h3>Fuel Tracking Is a Nightmare</h3>
+            <p>Fuel deliveries, price changes, gallons pumped vs. gallons received — keeping fuel inventory accurate takes specialized knowledge and daily attention.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Lottery Reconciliation</h3>
+            <p>Tracking instant tickets, online sales, payouts, and lottery commission. One mistake and your numbers are off for the entire week.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+            <h3>Vendor Invoice Chaos</h3>
+            <p>Dozens of vendors, different payment terms, price discrepancies on deliveries — and you're supposed to catch every overcharge?</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>Bank Reconciliation Delays</h3>
+            <p>Credit card deposits don't match POS totals. Fees eat into margins. Your bank statements are always weeks behind.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>No Time Left to Run Your Business</h3>
+            <p>You got into this business to run a store, not to be an accountant. But the books can't wait, and hiring a full-time bookkeeper costs $50K+/year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">How DohAssist Works</div>
+          <h2 class="section-title">Your Entire Back Office, Handled</h2>
+          <p class="section-desc">Our India-based back office team works overnight so your books are closed before you open. Cost savings with full HIPAA-aware workflows.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>We Connect to Your Systems</h3>
+            <p>POS, bank accounts, fuel management, lottery terminal — we integrate with your existing tools. No new software to learn.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Nightly Reconciliation</h3>
+            <p>Our team reconciles every transaction overnight — sales, fuel, lottery, deposits, vendor invoices. Discrepancies are flagged immediately.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Morning Report by 9 AM</h3>
+            <p>You wake up to a clean set of books, a summary of any discrepancies, and actionable insights. Every single day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results / Stats -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">By The Numbers</div>
+          <h2 class="section-title">Trusted by Gas Station Owners Nationwide</h2>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-value">$9M+</div>
+            <div class="stat-label">Revenue reconciled every year</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">170+</div>
+            <div class="stat-label">Franchise locations served</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">75+</div>
+            <div class="stat-label">Dedicated team members</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">$299</div>
+            <div class="stat-label">Per month, per location</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Before DohAssist, I was spending 3-4 hours every morning going through yesterday's numbers. Now my books are done before I even get to the store. The fuel and lottery reconciliation alone saved me a headache I didn't know I could fix."</p>
+          <p class="testimonial-author">Independent Gas Station Owner</p>
+          <p class="testimonial-role">Midwest United States</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Case Study</div>
+          <h2 class="section-title">How One Gas Station Owner Got 20 Hours Back Per Week</h2>
+        </div>
+        <div class="case-study">
+          <div class="case-study-content">
+            <h3>Multi-Location Gas Station Operator</h3>
+            <p>A gas station owner with multiple locations was drowning in daily bookkeeping. Between reconciling sales, tracking fuel deliveries, managing lottery, and matching bank deposits — they were spending 15-20 hours per week on paperwork alone.</p>
+            <p>After onboarding with DohAssist, their books were closed by 9 AM every morning. Our team caught fuel delivery discrepancies that had been going unnoticed, identified vendor overcharges, and streamlined their entire back-office operation.</p>
+            <div class="case-study-metrics">
+              <div class="case-metric">
+                <div class="case-metric-value">20 hrs</div>
+                <div class="case-metric-label">Saved per week on bookkeeping</div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric-value">9 AM</div>
+                <div class="case-metric-label">Daily books closed</div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric-value">$4,200</div>
+                <div class="case-metric-label">Vendor overcharges caught per quarter</div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric-value">99.8%</div>
+                <div class="case-metric-label">Reconciliation accuracy</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-visual">
+            <div class="case-visual-content">
+              <div class="case-visual-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+              <div class="case-visual-title">Daily Reconciliation</div>
+              <div class="case-visual-sub">Every transaction, every deposit, every day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">What You Get</div>
+          <h2 class="section-title">Everything Included for $299/mo</h2>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
+            <h3>Daily Sales Reconciliation</h3>
+            <p>POS totals matched to bank deposits every day. Cash, credit, debit, EBT — every payment method accounted for.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M15 10h2a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9l-3-3"/><rect x="5" y="6" width="8" height="6" rx="1"/><line x1="3" y1="22" x2="15" y2="22"/></svg></div>
+            <h3>Fuel Reconciliation</h3>
+            <p>Gallons delivered vs. gallons pumped vs. gallons in tank. Fuel inventory tracked daily with variance alerts.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Lottery Reconciliation</h3>
+            <p>Instant tickets, online sales, payouts, and commissions — all reconciled daily. No more lottery math headaches.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>Bank Reconciliation</h3>
+            <p>Credit card deposits, fees, and bank statements matched to POS data. Every penny accounted for.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+            <h3>Vendor Invoice Management</h3>
+            <p>Invoice processing, price verification, payment scheduling. We catch overcharges and discrepancies before you pay.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon pain-icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>Payroll &amp; HR Support</h3>
+            <p>Timesheet verification, payroll processing support, and HR documentation — so you can focus on your store, not paperwork.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">FAQ</div>
+          <h2 class="section-title">Common Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What does "books closed by 9 AM" actually mean?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Every morning before your store opens, your previous day's sales, fuel, lottery, and deposits are fully reconciled. You'll receive a summary report showing your totals, any discrepancies, and action items. No more spending your mornings buried in spreadsheets.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What POS and accounting systems do you work with?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">We work with all major gas station POS systems (Verifone, Gilbarco/Passport, NCR, PDI, Petrosoft) and integrate with QuickBooks, Xero, and other accounting platforms. Our team handles the setup.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you replace my current accountant or CPA?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">No — we complement your CPA. We handle the daily bookkeeping and reconciliation that takes the most time. Your CPA still handles taxes, financial planning, and compliance. We make their job easier by giving them clean, organized books.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does it take to get started?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Most locations are fully operational within 7-10 business days. We handle all the system connections and onboarding. You'll have a dedicated team member who knows your business.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is there a long-term contract?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">No. Month-to-month service with no long-term commitment. We earn your business every month by delivering clean books on time, every time.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Stop Doing Your Own Books</h2>
+        <p>Let our team handle the daily reconciliation so you can focus on growing your business.</p>
+        <button class="cta-btn" type="button">
+          Get Your Books Under Control
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 DohAssist. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://www.dohassist.com" target="_blank" rel="noopener noreferrer">DohAssist.com</a>
+          <a href="https://www.dohassist.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script>
+    (function() {
+      // Record form render time for timing-based spam protection
+      document.getElementById('form_rendered_at').value = Date.now();
+
+      // Phone formatting
+      const phoneInput = document.querySelector('input[name="phone"]');
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+          let d = e.target.value.replace(/\D/g, '');
+          if (d.length > 10) d = d.substring(0, 10);
+          if (d.length >= 7) e.target.value = '(' + d.substring(0,3) + ') ' + d.substring(3,6) + '-' + d.substring(6);
+          else if (d.length >= 4) e.target.value = '(' + d.substring(0,3) + ') ' + d.substring(3);
+          else if (d.length > 0) e.target.value = '(' + d;
+        });
+      }
+
+      // Capture UTM params
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmFields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+      utmFields.forEach(function(f) {
+        const v = urlParams.get(f);
+        if (v) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = f;
+          input.value = v;
+          document.getElementById('lead-form').appendChild(input);
+        }
+      });
+
+      // FAQ toggle
+      document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const item = this.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const isOpen = item.classList.contains('open');
+          // Close all
+          document.querySelectorAll('.faq-item.open').forEach(function(el) {
+            el.classList.remove('open');
+            el.querySelector('.faq-answer').style.maxHeight = '0';
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Smooth scroll to form
+      document.querySelectorAll('a[href="#lead-form-card"], .cta-btn').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.getElementById('lead-form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      // Form submission
+      document.getElementById('lead-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const errorEl = document.getElementById('form-error');
+        const submitBtn = document.getElementById('form-submit-btn');
+        errorEl.style.display = 'none';
+
+        const data = Object.fromEntries(new FormData(form));
+
+        // Client-side validation
+        if (!data.first_name || !data.first_name.trim()) { showError('Please enter your first name.'); return; }
+        if (!data.last_name || !data.last_name.trim()) { showError('Please enter your last name.'); return; }
+        if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { showError('Please enter a valid email address.'); return; }
+        if (!data.phone) { showError('Please enter your phone number.'); return; }
+        const phoneDigits = data.phone.replace(/\D/g, '');
+        if (phoneDigits.length !== 10) { showError('Please enter a valid 10-digit phone number.'); return; }
+        if (!data.business_name || !data.business_name.trim()) { showError('Please enter your business name.'); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+
+        fetch('/api/submit-lead/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(result) {
+          if (result.success) {
+            form.style.display = 'none';
+            document.querySelector('.form-card-header').style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+            // Fire conversion events
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-16877744463/DNpfCP2V_NMbEM_i9-8-',
+                'event_callback': function() {}
+              });
+              gtag('event', 'generate_lead', { 'event_category': 'form', 'event_label': data.landing_page });
+            }
+            if (typeof fbq === 'function') {
+              fbq('track', 'Lead');
+            }
+          } else {
+            showError(result.error || 'Something went wrong. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Get Started';
+          }
+        })
+        .catch(function() {
+          showError('Network error. Please check your connection and try again.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Get Started';
+        });
+
+        function showError(msg) {
+          errorEl.textContent = msg;
+          errorEl.style.display = 'block';
+          errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    })();
+    </script>
+
+  </body>
+</html>

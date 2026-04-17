@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/api/submit-lead/", "destination": "/api/submit-lead" }
+  ]
+}
