@@ -598,7 +598,7 @@ a { color: var(--primary); text-decoration: none; }
   .hero-stats { gap: 20px; }
   .hero-stat-value { font-size: 22px; }
   .pain-grid { grid-template-columns: 1fr; gap: 16px; }
-  .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+  .steps-grid { grid-template-columns: 1fr 1fr !important; gap: 24px; }
   .stats-bar { grid-template-columns: 1fr 1fr; gap: 20px; }
   .case-study { grid-template-columns: 1fr; }
   .case-study-visual { min-height: 200px; }
@@ -611,6 +611,7 @@ a { color: var(--primary); text-decoration: none; }
   .radio-group { flex-direction: column; gap: 8px; }
   .stats-bar { grid-template-columns: 1fr; }
   .header-phone span { display: none; }
+  .steps-grid { grid-template-columns: 1fr !important; }
 }
 </style>
   </head>
@@ -652,7 +653,7 @@ a { color: var(--primary); text-decoration: none; }
           </div>
           <h1>Your Employees Are Costing You <em>Thousands</em> Every Month</h1>
           <p class="hero-sub">
-            Void abuse. Sweethearting. Till tapping. Cash shortages. If you own a gas station or convenience store, employee theft is quietly draining your profits — and your POS system alone won't catch it.
+            Void abuse. Sweethearting. Till tapping. Abort transactions. Penny rings. PLU inquiry abuse. No sales. If you own a gas station or convenience store, employee theft is quietly draining your profits — and your POS system alone won't catch it.
           </p>
           <p class="hero-sub" style="font-weight:600; color:var(--dark); margin-bottom: 28px;">
             DohShield monitors every POS transaction against video evidence and delivers evidence packages when theft is detected.
@@ -660,7 +661,7 @@ a { color: var(--primary); text-decoration: none; }
           <div class="hero-stats">
             <div>
               <div class="hero-stat-value">$183K</div>
-              <div class="hero-stat-label">Theft identified at one operation</div>
+              <div class="hero-stat-label">Projected annual loss stopped at one store</div>
             </div>
             <div>
               <div class="hero-stat-value">125K+</div>
@@ -775,10 +776,10 @@ a { color: var(--primary); text-decoration: none; }
       <div class="container">
         <div class="section-header">
           <div class="section-eyebrow">The Problem</div>
-          <h2 class="section-title">The 6 Ways Employees Steal From Your Store</h2>
-          <p class="section-desc">The average convenience store loses $14,000+ per year to employee theft. Here are the most common methods — and why your current systems miss them.</p>
+          <h2 class="section-title">The Red Flags Hiding in Your Electronic Journal</h2>
+          <p class="section-desc">The average convenience store loses $14,000+ per year to employee theft. These are the transaction types your POS records every day — but no one is reviewing them.</p>
         </div>
-        <div class="pain-grid">
+        <div class="pain-grid" style="grid-template-columns: repeat(3, 1fr);">
           <div class="pain-card">
             <div class="pain-icon pain-icon-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <h3>Void Abuse</h3>
@@ -791,23 +792,23 @@ a { color: var(--primary); text-decoration: none; }
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <h3>Till Tapping</h3>
-            <p>Small amounts removed from the register throughout a shift. $20 here, $50 there — adds up to thousands per month per location.</p>
+            <h3>Abort Transactions</h3>
+            <p>Cashier starts a transaction, collects payment, then aborts before it's recorded. The POS shows nothing — but the cash is gone.</p>
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
-            <h3>Refund Fraud</h3>
-            <p>Fake refunds processed with no actual return. Without cross-referencing POS data and video, these slip through unnoticed.</p>
+            <h3>Penny Rings &amp; PLU Abuse</h3>
+            <p>Ringing items at $0.01 or using incorrect PLU codes to give away merchandise. Rate check abuse to test prices and manipulate transactions.</p>
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
-            <h3>Cash Shortages</h3>
-            <p>Your register is short every day but you can't prove who's responsible. Safe drop counts don't match. Cash-in-drawer discrepancies are constant.</p>
+            <h3>No-Sale &amp; Till Tapping</h3>
+            <p>Opening the drawer without a transaction. Small amounts removed throughout a shift — $20 here, $50 there — adds up to thousands per month.</p>
           </div>
           <div class="pain-card">
-            <div class="pain-icon pain-icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 22V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M15 10h2a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9l-3-3"/><rect x="5" y="6" width="8" height="6" rx="1"/><line x1="3" y1="22" x2="15" y2="22"/></svg></div>
-            <h3>Fuel Theft</h3>
-            <p>Drive-offs, pump manipulations, and unauthorized fuel dispensing. Gas stations lose an average of $2,000-$5,000/month to fuel-related theft.</p>
+            <div class="pain-icon pain-icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+            <h3>Refund Fraud &amp; Cash Shortages</h3>
+            <p>Fake refunds processed with no actual return. Register is short every day but you can't prove who's responsible. Safe drop counts never match.</p>
           </div>
         </div>
       </div>
@@ -818,25 +819,52 @@ a { color: var(--primary); text-decoration: none; }
       <div class="container">
         <div class="section-header">
           <div class="section-eyebrow">How DohShield Works</div>
-          <h2 class="section-title">We Watch Every Transaction So You Don't Have To</h2>
-          <p class="section-desc">Our India-based back office team audits your POS data against video evidence every single day — not software alone, real human review.</p>
+          <h2 class="section-title">Your Electronic Journal, Reviewed Every Single Day</h2>
+          <p class="section-desc">Our trained professionals review your POS electronic journal daily, flag every suspicious transaction, then video-verify each one. You get a findings report emailed to you every business day. This cycle repeats — every single day.</p>
         </div>
-        <div class="steps-grid">
+        <div class="steps-grid" style="grid-template-columns: repeat(4, 1fr);">
           <div class="step">
             <div class="step-number">1</div>
-            <h3>We Connect to Your POS</h3>
-            <p>We integrate with your existing POS and camera systems. No new hardware needed. Setup takes days, not weeks.</p>
+            <h3>Journal Review</h3>
+            <p>Our team reviews every transaction in your electronic journal — voids, refunds, no-sales, aborts, penny rings, PLU inquiries, and more.</p>
           </div>
           <div class="step">
             <div class="step-number">2</div>
-            <h3>Daily Transaction Auditing</h3>
-            <p>Every void, refund, no-sale, and discount is cross-referenced against video footage. Our team flags suspicious activity in real time.</p>
+            <h3>Flag Red Flags</h3>
+            <p>Suspicious transactions are marked and categorized. The number of transactions we review depends on the plan you choose.</p>
           </div>
           <div class="step">
             <div class="step-number">3</div>
-            <h3>Evidence Packages Delivered</h3>
-            <p>When theft is confirmed, you get a complete evidence package — POS records, video clips, timestamps — ready for termination or prosecution.</p>
+            <h3>Video Verification</h3>
+            <p>Every flagged transaction is then verified against your camera footage. We confirm exactly what happened, who was involved, and when.</p>
           </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Daily Findings Report</h3>
+            <p>You receive an email every business day with the findings — what happened at your store, which employees were involved, and recommended actions.</p>
+          </div>
+        </div>
+
+        <!-- On-Demand LP Section -->
+        <div style="margin-top: 48px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+          <div>
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px;">Use Us Like Your Own Loss Prevention Department</h3>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7;">DohShield isn't just a daily audit. You can use our team like your own on-demand loss prevention department — whenever you need us.</p>
+          </div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text);">
+              <svg style="width:20px; height:20px; color: var(--primary); flex-shrink:0; margin-top:2px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Huge till shortage?</strong> Ask us to skip transaction review and watch the entire shift recording instead.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text);">
+              <svg style="width:20px; height:20px; color: var(--primary); flex-shrink:0; margin-top:2px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Suspect a specific employee?</strong> Request us to watch their full shift — we'll review every minute of their time on camera.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text);">
+              <svg style="width:20px; height:20px; color: var(--primary); flex-shrink:0; margin-top:2px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Need evidence fast?</strong> We build timestamped evidence packages with POS data and video clips, ready for termination or law enforcement.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -851,7 +879,7 @@ a { color: var(--primary); text-decoration: none; }
         <div class="stats-bar">
           <div class="stat-item">
             <div class="stat-value">$183K</div>
-            <div class="stat-label">Theft identified at one multi-location operation</div>
+            <div class="stat-label">Projected annual loss stopped at one store</div>
           </div>
           <div class="stat-item">
             <div class="stat-value">125K+</div>
@@ -880,17 +908,17 @@ a { color: var(--primary); text-decoration: none; }
       <div class="container">
         <div class="section-header">
           <div class="section-eyebrow">Case Study</div>
-          <h2 class="section-title">How One Gas Station Owner Found $183K in Employee Theft</h2>
+          <h2 class="section-title">How We Stopped $183K in Projected Annual Losses</h2>
         </div>
         <div class="case-study">
           <div class="case-study-content">
             <h3>Multi-Location Gas Station Operation</h3>
-            <p>A multi-location gas station operator suspected cash shortages but couldn't pinpoint the source. After deploying DohShield across their locations, our team identified systematic void abuse, sweethearting patterns, and fuel discrepancies — totaling $183,000 in identified theft.</p>
-            <p>The operator received detailed evidence packages for each incident, enabling them to take swift corrective action and implement preventive controls.</p>
+            <p>A gas station operator noticed cash shortages but couldn't pinpoint the source. After deploying DohShield, our team reviewed their electronic journal and found systematic void abuse, abort transactions, and sweethearting patterns. If this employee had continued working at the location, we projected they would have cost the store $183,000 in one year.</p>
+            <p>The operator received detailed evidence packages for each incident — POS data matched with video clips — enabling them to take immediate action and stop the bleeding.</p>
             <div class="case-study-metrics">
               <div class="case-metric">
                 <div class="case-metric-value">$183K</div>
-                <div class="case-metric-label">Total theft identified</div>
+                <div class="case-metric-label">Projected annual loss prevented</div>
               </div>
               <div class="case-metric">
                 <div class="case-metric-value">3 Months</div>
@@ -927,13 +955,13 @@ a { color: var(--primary); text-decoration: none; }
         <div class="pain-grid">
           <div class="pain-card">
             <div class="pain-icon pain-icon-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <h3>POS + Video Auditing</h3>
-            <p>Every transaction cross-referenced with video footage. Voids, refunds, no-sales, and discounts — nothing slips through.</p>
+            <h3>Daily Journal Review &amp; Video Verification</h3>
+            <p>Every red flag transaction in your electronic journal is video-verified. Voids, refunds, no-sales, aborts, penny rings, PLU abuse — nothing slips through.</p>
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <h3>Sweethearting Detection</h3>
-            <p>AI-assisted pattern detection identifies when cashiers give away free items or apply unauthorized discounts.</p>
+            <h3>Sweethearting &amp; Pattern Detection</h3>
+            <p>Our team identifies when cashiers give away free items, apply unauthorized discounts, or show recurring suspicious behavior across shifts.</p>
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -947,8 +975,8 @@ a { color: var(--primary); text-decoration: none; }
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-            <h3>Compliance Audits</h3>
-            <p>Operational compliance checks — ID verification, age-restricted sales, proper procedures — all monitored daily.</p>
+            <h3>On-Demand Shift Watching</h3>
+            <p>Need us to watch an entire shift? Suspect a specific employee? Just ask. We'll review the full video recording and report back.</p>
           </div>
           <div class="pain-card">
             <div class="pain-icon pain-icon-yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -1003,7 +1031,7 @@ a { color: var(--primary); text-decoration: none; }
             <button class="faq-question">Who does the actual monitoring?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">Our trained India-based back office team handles all daily auditing. They cross-reference every flagged POS transaction against video evidence. Cost savings with full HIPAA-aware workflows mean you get enterprise-level monitoring at a fraction of the cost of hiring in-house.</div></div>
+            <div class="faq-answer"><div class="faq-answer-inner">Our trained loss prevention professionals handle all daily auditing. They review your electronic journal, flag suspicious transactions, and video-verify each one. You get enterprise-level monitoring at a fraction of the cost of hiring an in-house LP team.</div></div>
           </div>
         </div>
       </div>
