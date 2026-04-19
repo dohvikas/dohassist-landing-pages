@@ -161,19 +161,29 @@ a { color: var(--primary); text-decoration: none; }
 }
 .hero-stats {
   display: flex;
-  gap: 32px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
+  gap: 12px;
+  padding-top: 24px;
 }
-.hero-stat-value {
-  font-size: 28px;
+.hero-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+.hero-stat-pill .stat-num {
+  font-size: 18px;
   font-weight: 800;
-  color: var(--dark);
+  color: var(--primary);
+  white-space: nowrap;
 }
-.hero-stat-label {
-  font-size: 13px;
+.hero-stat-pill .stat-txt {
+  font-size: 12px;
+  font-weight: 500;
   color: var(--text-muted);
-  margin-top: 2px;
+  line-height: 1.3;
 }
 
 /* ─── Form Card ─── */
@@ -595,8 +605,7 @@ a { color: var(--primary); text-decoration: none; }
 @media (max-width: 768px) {
   .hero .container { grid-template-columns: 1fr; gap: 32px; }
   .hero { padding: 40px 0 32px; }
-  .hero-stats { gap: 20px; }
-  .hero-stat-value { font-size: 22px; }
+  .hero-stats { flex-wrap: wrap; gap: 8px; }
   .pain-grid { grid-template-columns: 1fr; gap: 16px; }
   .steps-grid { grid-template-columns: 1fr; gap: 24px; }
   .stats-bar { grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -607,7 +616,7 @@ a { color: var(--primary); text-decoration: none; }
   .testimonial-quote { font-size: 17px; }
 }
 @media (max-width: 480px) {
-  .hero-stats { flex-direction: column; gap: 12px; }
+  .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 8px; }
   .radio-group { flex-direction: column; gap: 8px; }
   .stats-bar { grid-template-columns: 1fr; }
   .header-phone span { display: none; }
@@ -651,17 +660,17 @@ a { color: var(--primary); text-decoration: none; }
             From $299/month per location. No contracts. No setup fees.
           </p>
           <div class="hero-stats">
-            <div>
-              <div class="hero-stat-value">$9M+</div>
-              <div class="hero-stat-label">Reconciled annually</div>
+            <div class="hero-stat-pill">
+              <span class="stat-num">$9M+</span>
+              <span class="stat-txt">Reconciled<br>annually</span>
             </div>
-            <div>
-              <div class="hero-stat-value">170+</div>
-              <div class="hero-stat-label">Locations served</div>
+            <div class="hero-stat-pill">
+              <span class="stat-num">170+</span>
+              <span class="stat-txt">Locations<br>served</span>
             </div>
-            <div>
-              <div class="hero-stat-value">9 AM</div>
-              <div class="hero-stat-label">Books closed daily</div>
+            <div class="hero-stat-pill">
+              <span class="stat-num">9 AM</span>
+              <span class="stat-txt">Books closed<br>daily</span>
             </div>
           </div>
         </div>
